@@ -1,0 +1,152 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color, #333);
+    background-color: var(--background-color, #f4f4f4);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* تأكد من أن الجسم يمتد بالكامل */
+    /* padding-bottom: 100px;  */
+}
+.menu-toggle {
+    display: none; /* إظهار الزر في الشاشات الصغيرة */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3rem 0 1rem;
+    width: 100%;
+    position: relative; /* جعل الفوتر في مكانه الطبيعي في أسفل الصفحة */
+    margin-top: auto; /* يجلب الفوتر إلى أسفل الصفحة */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 2rem;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #3498db; /* تغيير اللون عند التمرير */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        position: relative; /* الفوتر سيظل في أسفل الصفحة */
+        margin-top: auto;
+        width: 100%;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .footer-section {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        font-size: 1rem;
+    }
+
+    /* Navbar Styles for Small Screens */
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: block; /* إظهار الزر في الشاشات الصغيرة */
+        font-size: 2rem;
+
+        border: none;
+        color:#321e17;
+        position: fixed; /* جعل الزر مثبتًا */
+        top: 1rem; /* تحديد المسافة من الأعلى */
+        right: 1rem; /* تحديد المسافة من اليمين */
+        z-index: 10; /* التأكد من أن الزر في الأمام */
+        background-color: transparent;
+    }
+}

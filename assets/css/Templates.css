@@ -1,0 +1,209 @@
+/* Global Styles */
+:root {
+    --primary-color: #e7bf92;
+    --secondary-color: #c89224;
+    --background-color: #321e17;
+    --text-color: #70523f;
+    --header-height:125px;
+    --mount:#e7bf92;
+    --Nile-dark:#2b322e;
+    --color1:#c89224;
+    --color2:#d19e29;
+    --color3:#321e17;
+    --color4:#bc542a;
+    --gold-light:#61c1c3;
+    --Nile-color:#3ea7af;
+    --Nile-color1:#319496;
+    --mounten:#9b7c62;
+    --mounten1:#70523f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--mount);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.hero .btn-primary {
+    padding: 1rem 2rem;
+    background-color: var(--color1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.hero .btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Makeup Artists Section */
+.makeup-artists {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--mount);
+}
+
+.makeup-artists h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color1);
+}
+
+/* Makeup Artists Grid */
+.makeup-artists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Makeup Artist Card */
+.makeup-artist-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.makeup-artist-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.makeup-artist-card h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--color3);
+}
+
+.makeup-artist-card p {
+    font-size: 1rem;
+    color: var(--Nile-color1);
+    margin-top: 0.5rem;
+}
+/* تنسيق قسم الروابط الاجتماعية */
+.social-links {
+    display: flex;
+    justify-content: center; /* محاذاة الأيقونات في الوسط */
+    gap: 10px; /* مسافة بين الأيقونات */
+}
+
+.social-links a {
+    font-size: 24px; /* حجم الأيقونات */
+    color: #000; /* اللون الافتراضي للأيقونات */
+    transition: color 0.3s ease, transform 0.3s ease; /* تأثير التغيير اللوني والتكبير عند التمرير */
+}
+
+.social-links a:hover {
+    color: #007bff; /* تغيير اللون عند التمرير */
+    transform: scale(1.1); /* تكبير الأيقونة عند التمرير */
+}
+
+/* إضافة تأثير عند التمرير على أيقونة الفيسبوك */
+.social-links .fab.fa-facebook:hover {
+    color: #3b5998; /* اللون الخاص بالفيسبوك */
+}
+
+/* إضافة تأثير عند التمرير على أيقونة الإنستغرام */
+.social-links .fab.fa-instagram:hover {
+    color: #e4405f; /* اللون الخاص بالإنستغرام */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3rem 0 1rem;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 2rem;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .makeup-artists-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .makeup-artist-card {
+        padding: 1rem;
+    }
+
+    .makeup-artist-card h3 {
+        font-size: 1.3rem;
+    }
+}
