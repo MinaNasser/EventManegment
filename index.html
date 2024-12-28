@@ -13,20 +13,36 @@
 
     <!-- <link rel="stylesheet" href="../assets/css/general.css"> -->
     <style>
+        .testimonials {
+            text-align: center;
+            margin: 50px 0;
+        }
+
         .testimonial-slider {
             position: relative;
+            width: 80%;
+            margin: 0 auto;
+            perspective: 1000px;
+            /* لجعل التأثير ثلاثي الأبعاد */
+            height: 200px;
             overflow: hidden;
-            height: auto;
         }
-    
+
         .testimonial {
-            display: none;
-            text-align: center;
-            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            width: 100%;
+            backface-visibility: hidden;
+            /* إخفاء الجوانب الخلفية */
+            transform-origin: right center;
+            transform: rotateY(180deg);
+            /* البداية معكوسة */
+            transition: transform 1s ease-in-out;
+            opacity: 0;
         }
-    
+
         .testimonial.active {
-            display: block;
+            transform: rotateY(0);
+            /* الصفحة النشطة */
             opacity: 1;
         }
     </style>
@@ -146,17 +162,23 @@
             let currentIndex = 0;
 
             function showNextTestimonial() {
+                // إزالة الحالة النشطة من العنصر الحالي
                 testimonials[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex + 1) % testimonials.length; // التنقل دائري
+
+                // حساب العنصر التالي
+                currentIndex = (currentIndex + 1) % testimonials.length;
+
+                // إضافة الحالة النشطة للعنصر التالي
                 testimonials[currentIndex].classList.add('active');
             }
 
-            // إظهار الشهادة الأولى بشكل تلقائي
+            // تفعيل أول شهادة
             testimonials[currentIndex].classList.add('active');
 
-            // التبديل كل 5 ثوانٍ
+            // تشغيل الحركة كل 4 ثوانٍ
             setInterval(showNextTestimonial, 4000);
         });
+
     </script>
 </body>
 
