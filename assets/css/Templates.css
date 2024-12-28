@@ -4,18 +4,18 @@
     --secondary-color: #c89224;
     --background-color: #321e17;
     --text-color: #70523f;
-    --header-height:125px;
-    --mount:#e7bf92;
-    --Nile-dark:#2b322e;
-    --color1:#c89224;
-    --color2:#d19e29;
-    --color3:#321e17;
-    --color4:#bc542a;
-    --gold-light:#61c1c3;
-    --Nile-color:#3ea7af;
-    --Nile-color1:#319496;
-    --mounten:#9b7c62;
-    --mounten1:#70523f;
+    --header-height: 125px;
+    --mount: #e7bf92;
+    --Nile-dark: #2b322e;
+    --color1: #c89224;
+    --color2: #d19e29;
+    --color3: #321e17;
+    --color4: #bc542a;
+    --gold-light: #61c1c3;
+    --Nile-color: #3ea7af;
+    --Nile-color1: #319496;
+    --mounten: #9b7c62;
+    --mounten1: #70523f;
 }
 
 * {
@@ -70,8 +70,9 @@
 /* Makeup Artists Grid */
 .makeup-artists-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
 
 /* Makeup Artist Card */
@@ -85,9 +86,12 @@
 
 .makeup-artist-card img {
     width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .makeup-artist-card h3 {
@@ -120,7 +124,6 @@
     transform: scale(1.1);
 }
 
-/* Add hover effects for Facebook and Instagram */
 .social-links .fab.fa-facebook:hover {
     color: #3b5998;
 }
@@ -195,18 +198,6 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .makeup-artists-grid {
-        grid-template-columns: 1fr; /* عرض صورة واحدة في كل صف */
-    }
-
-    .makeup-artist-card img {
-        width: 100%; /* جعل الصورة تمتد بعرض العنصر الحاوي */
-        height: auto; /* الحفاظ على نسبة الأبعاد */
-    }
-    .makeup-artists-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .makeup-artist-card {
         padding: 1rem;
     }
@@ -215,7 +206,6 @@ footer {
         font-size: 1.3rem;
     }
 
-    /* Adjust Hero Section for small screens */
     .hero {
         padding: 4rem 2rem;
     }
@@ -233,7 +223,6 @@ footer {
         padding: 0.8rem 1.5rem;
     }
 
-    /* Adjust Footer Content for small screens */
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -246,18 +235,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .makeup-artists-grid {
-        grid-template-columns: 1fr; /* عرض صورة واحدة في كل صف */
-    }
-
-    .makeup-artist-card img {
-        width: 100%; /* جعل الصورة تمتد بعرض العنصر الحاوي */
-        height: auto; /* الحفاظ على نسبة الأبعاد */
-    }
-    .makeup-artists-grid {
-        grid-template-columns: 1fr;
-    }
-
     .makeup-artist-card h3 {
         font-size: 1.1rem;
     }
@@ -273,17 +250,5 @@ footer {
     .hero .btn-primary {
         font-size: 1rem;
         padding: 0.6rem 1.2rem;
-    }
-}
-
-/* قاعدة لتنسيق الصور للأجهزة الصغيرة */
-@media (max-width: 768px) {
-    .makeup-artists-grid {
-        grid-template-columns: 1fr; /* عرض صورة واحدة في كل صف */
-    }
-
-    .makeup-artist-card img {
-        width: 100%; /* جعل الصورة تمتد بعرض العنصر الحاوي */
-        height: auto; /* الحفاظ على نسبة الأبعاد */
     }
 }
