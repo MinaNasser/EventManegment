@@ -101,32 +101,32 @@
     color: var(--Nile-color1);
     margin-top: 0.5rem;
 }
-/* تنسيق قسم الروابط الاجتماعية */
+
+/* Social Links */
 .social-links {
     display: flex;
-    justify-content: center; /* محاذاة الأيقونات في الوسط */
-    gap: 10px; /* مسافة بين الأيقونات */
+    justify-content: center;
+    gap: 10px;
 }
 
 .social-links a {
-    font-size: 24px; /* حجم الأيقونات */
-    color: #000; /* اللون الافتراضي للأيقونات */
-    transition: color 0.3s ease, transform 0.3s ease; /* تأثير التغيير اللوني والتكبير عند التمرير */
+    font-size: 24px;
+    color: #000;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #007bff; /* تغيير اللون عند التمرير */
-    transform: scale(1.1); /* تكبير الأيقونة عند التمرير */
+    color: #007bff;
+    transform: scale(1.1);
 }
 
-/* إضافة تأثير عند التمرير على أيقونة الفيسبوك */
+/* Add hover effects for Facebook and Instagram */
 .social-links .fab.fa-facebook:hover {
-    color: #3b5998; /* اللون الخاص بالفيسبوك */
+    color: #3b5998;
 }
 
-/* إضافة تأثير عند التمرير على أيقونة الإنستغرام */
 .social-links .fab.fa-instagram:hover {
-    color: #e4405f; /* اللون الخاص بالإنستغرام */
+    color: #e4405f;
 }
 
 /* Footer Styles */
@@ -205,5 +205,57 @@ footer {
 
     .makeup-artist-card h3 {
         font-size: 1.3rem;
+    }
+
+    /* Adjust Hero Section for small screens */
+    .hero {
+        padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn-primary {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* Adjust Footer Content for small screens */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .makeup-artists-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .makeup-artist-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero .btn-primary {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
     }
 }
