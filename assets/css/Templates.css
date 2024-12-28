@@ -48,6 +48,8 @@
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
+    position: relative;  /* Added to ensure it's above other elements */
+    z-index: 10;  /* Ensures the button is clickable */
 }
 
 .hero .btn-primary:hover {
@@ -195,19 +197,22 @@ footer {
     border-top: 1px solid #555;
     font-size: 0.9rem;
 }
+.menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+}
 
-/* Responsive Design */
+/* عند ظهور القائمة، اجعلها مرئية */
+.navbar.show {
+    display: block;
+}
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    .makeup-artist-card {
-        padding: 1rem;
-    }
-
-    .makeup-artist-card h3 {
-        font-size: 1.3rem;
-    }
-
     .hero {
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
     }
 
     .hero h1 {
@@ -218,37 +223,98 @@ footer {
         font-size: 1rem;
     }
 
-    .hero .btn-primary {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
+    .makeup-artist-card {
+        padding: 1.5rem;
     }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .makeup-artist-card img {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
     }
 
-    .footer-section {
-        margin-bottom: 1rem;
+    .makeup-artist-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .makeup-artist-card p {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    .makeup-artist-card h3 {
-        font-size: 1.1rem;
+    .hero {
+        padding: 3rem 1rem;
     }
 
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .hero p {
         font-size: 0.9rem;
     }
 
-    .hero .btn-primary {
+    .makeup-artist-card {
+        padding: 1rem;
+    }
+
+    .makeup-artist-card img {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+    }
+
+    .makeup-artist-card h3 {
         font-size: 1rem;
-        padding: 0.6rem 1.2rem;
+    }
+
+    .makeup-artist-card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    .hero p {
+        font-size: 0.8rem;
+    }
+    .makeup-artist-card {
+        padding: 0.8rem;
+    }
+    .makeup-artist-card img {
+        max-width: 120px;
+        width: 100%;
+        height: auto;
+    }
+    .makeup-artist-card h3 {
+        font-size: 0.9rem;
+    }
+    .makeup-artist-card p {
+        font-size: 0.7rem;
+    }
+    .social-links a {
+        font-size: 20px;
+    }
+    .footer-section h3 {
+        font-size: 1.2rem;
+    }
+    .footer-section p, .footer-section ul {
+        font-size: 0.8rem;
+    }
+    .footer-section ul li {
+        margin-bottom: 0.3rem;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+        padding-top: 0.8rem;
+        border-top: 1px solid #555;
+        margin-top: 1rem;
+        text-align: center;
     }
 }
