@@ -433,12 +433,19 @@ main {
 
 /* تصغير حجم النص في حالة الشاشات الصغيرة */
 @media (max-width: 768px) {
+    .testimonials h2 {
+        font-size: 1.2rem;
+
+    }
     .testimonial p {
         font-size: 1rem; /* حجم النص أصغر */
     }
 }
 
 @media (max-width: 480px) {
+    .testimonials h2 {
+        font-size: 1rem;
+    }
     .testimonial p {
         font-size: 0.9rem; /* حجم النص أصغر أكثر للشاشات الصغيرة جدًا */
     }
