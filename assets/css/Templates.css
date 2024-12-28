@@ -196,6 +196,14 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .makeup-artists-grid {
+        grid-template-columns: 1fr; /* عرض صورة واحدة في كل صف */
+    }
+
+    .makeup-artist-card img {
+        width: 100%; /* جعل الصورة تمتد بعرض العنصر الحاوي */
+        height: auto; /* الحفاظ على نسبة الأبعاد */
+    }
+    .makeup-artists-grid {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -238,6 +246,14 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .makeup-artists-grid {
+        grid-template-columns: 1fr; /* عرض صورة واحدة في كل صف */
+    }
+
+    .makeup-artist-card img {
+        width: 100%; /* جعل الصورة تمتد بعرض العنصر الحاوي */
+        height: auto; /* الحفاظ على نسبة الأبعاد */
+    }
     .makeup-artists-grid {
         grid-template-columns: 1fr;
     }
