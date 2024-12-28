@@ -259,3 +259,15 @@ footer {
         padding: 0.6rem 1.2rem;
     }
 }
+
+/* قاعدة لتنسيق الصور للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .makeup-artists-grid {
+        grid-template-columns: 1fr; /* عرض صورة واحدة في كل صف */
+    }
+
+    .makeup-artist-card img {
+        width: 100%; /* جعل الصورة تمتد بعرض العنصر الحاوي */
+        height: auto; /* الحفاظ على نسبة الأبعاد */
+    }
+}
