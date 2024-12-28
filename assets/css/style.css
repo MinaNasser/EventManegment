@@ -424,6 +424,26 @@ main {
     font-weight: bold;
 }
 
+/* الأسلوب الأساسي */
+.testimonial p {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* تصغير حجم النص في حالة الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .testimonial p {
+        font-size: 1rem; /* حجم النص أصغر */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial p {
+        font-size: 0.9rem; /* حجم النص أصغر أكثر للشاشات الصغيرة جدًا */
+    }
+}
+
 /* Quick Links Section */
 .quick-links {
     padding: 4rem 0;
