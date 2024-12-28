@@ -387,58 +387,52 @@ main {
     padding: 0 1rem 1rem;
 }
 
-/* Testimonials Section */
+/* الحاوية العامة للشهادات */
 .testimonials {
     background-color: var(--mounten1);
     padding: 4rem 0;
     color: #fff;
     border: #666666 3px solid;
     border-radius: 20px;
+    overflow: hidden; /* يمنع المحتوى من الخروج خارج الحاوية */
 }
 
+/* تنسيق العنوان */
 .testimonials h2 {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-
+    margin-bottom: 1rem; /* تقليل المسافة السفلية */
 }
 
+/* الحاوية المنزلقة */
 .testimonial-slider {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* منع تجاوز العناصر */
 }
 
+/* الشهادات */
 .testimonial {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem; /* تقليل البعد الداخلي */
 }
 
 .testimonial p {
     font-style: italic;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    margin-bottom: 1.5rem;
+    margin: 0.5rem 0 1rem; /* تقليل المسافات العلوية والسفلية */
 }
 
-.testimonial cite {
-    font-weight: bold;
-}
-
-/* الأسلوب الأساسي */
-.testimonial p {
-    font-style: italic;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-/* تصغير حجم النص في حالة الشاشات الصغيرة */
+/* تخصيص النصوص الصغيرة */
 @media (max-width: 768px) {
     .testimonials h2 {
         font-size: 1.2rem;
-
     }
     .testimonial p {
-        font-size: 1rem; /* حجم النص أصغر */
+        font-size: 1rem;
+        margin: 0.3rem 0 0.8rem; /* تقليل الهوامش أكثر */
     }
 }
 
@@ -447,9 +441,11 @@ main {
         font-size: 1rem;
     }
     .testimonial p {
-        font-size: 0.9rem; /* حجم النص أصغر أكثر للشاشات الصغيرة جدًا */
+        font-size: 0.9rem;
+        margin: 0.2rem 0 0.5rem; /* تصغير الهوامش للشاشات الصغيرة جدًا */
     }
 }
+
 
 /* Quick Links Section */
 .quick-links {
