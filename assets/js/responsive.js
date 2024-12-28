@@ -14,9 +14,3 @@ document.addEventListener("click", function(event) {
         menu.classList.remove("show");
     }
 });
-document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector("header");
-    const mainContent = document.querySelector(".main-content");
-    const headerHeight = header.offsetHeight; // ارتفاع الهيدر
-    mainContent.style.marginTop = `${headerHeight}px`; // تطبيق المسافة ديناميكيًا
-});
