@@ -202,7 +202,8 @@ footer {
     cursor: pointer;
     background: none;
     border: none;
-    color: #333;
+    color: #fff;
+    /* color: #333; */
 }
 
 /* عند ظهور القائمة، اجعلها مرئية */
